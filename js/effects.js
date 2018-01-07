@@ -311,7 +311,7 @@ function changeEffect() {
 
     switch (effect) {
         case 0: // Delay
-            currentEffectNode = createPitchShifter(); //createDelay();
+            currentEffectNode = createDelay();
             break;
         case 1: // Reverb
             currentEffectNode = createReverb();
