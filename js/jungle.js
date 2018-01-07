@@ -204,7 +204,7 @@ Jungle.prototype.setDelay = function(delayTime) {
     this.modGain2.gain.setTargetAtTime(0.5*delayTime, 0, 0.010);
 }
 
-var previousPitch = -0.3;
+var previousPitch = -1;
 
 Jungle.prototype.setPitchOffset = function(mult) {
         if (mult>0) { // pitch up
