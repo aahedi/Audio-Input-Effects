@@ -140,7 +140,7 @@ onInput="crossfade( event.target.value );">
 		Flanger feedback: <input id="sflfb" type="range" min="0" max="1" step="0.01" value="0.9" style="height: 20px; width: 200px;" onInput="if (sfllfb) sfllfb.gain.value = event.target.value; if (sflrfb) sflrfb.gain.value = event.target.value;">
 	</div>
 	<div id="doublerControls">A pitch-shifting effect, using sample-accurate delay ramping.  Defaults to one octave down.<br>
-		Pitch-shift: <input id="octpitch" type="range" min="-1" max="1" step="0.05" value="-0.6" style="height: 20px; width: 200px;" onInput="if (effect.setPitchOffset) effect.setPitchOffset(event.target.value);document.getElementById('nilai').value=this.value"><input id="nilai"/><br>
+		Pitch-shift: <input id="octpitch" type="range" min="-1" max="1" step="0.05" value="-0.5" style="height: 20px; width: 200px;" onInput="if (effect.setPitchOffset) effect.setPitchOffset(event.target.value);document.getElementById('nilai').value=this.value"><input id="nilai" onkeydown="document.getElementById('octpitch').value=this.value" min="-1" max="1" step="0.05" value="-0.5" type="number"/><br>
 	</div>
 	<div id="modDelayControls">A delay with a basic chorus effect.<br>
 		Delay time: <input id="mdtime" type="range" min="0.01" max="3" step="0.01" value="0.15" style="height: 20px; width: 200px" onInput="if (mdtime) mdtime.delayTime.value = event.target.value;"><br>
